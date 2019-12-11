@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/edrjc/video-marker-deschmapstuto/issues"
   },
-  "homepage": "https://github.com/edrjc/video-marker-deschmapstuto#readme"
+  "homepage": "https://github.com/edrjc/video-marker-deschmapstuto#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
