@@ -1,12 +1,17 @@
 const readline = require('readline-sync')
 const Parser = require('rss-parser')
 const TREND_URL = 'https://trends.google.com/trends/trendingsearches/daily/rss?geo=BR'
+const robots = {
+	text: require('./robots/text.js')
+}
 
 async function start(){
 	const content = {}
 	
 	content.searchTerm = await askAndReturnSearchTerm()
 	content.prefix = askAndReturnPrefix()
+
+	await robots.text(content)
 
 	async function askAndReturnSearchTerm() {
 		const response = readline.question('Type a wikipedia search term or G to fetch google trends:')
